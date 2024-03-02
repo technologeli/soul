@@ -105,6 +105,5 @@
         };
       };
     };
-    # xdg.configFile."alacritty/alacritty.toml".source = ./init.lua;
   };
 }
