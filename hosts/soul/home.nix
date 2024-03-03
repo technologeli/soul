@@ -42,6 +42,8 @@
   home.packages = with pkgs; [
     eza
     fzf
+    pass
+    passExtensions.pass-otp
 
     logseq
     obsidian

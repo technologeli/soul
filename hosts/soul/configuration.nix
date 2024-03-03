@@ -73,6 +73,7 @@
     git
     gcc
     zip unzip p7zip
+    gnupg
   ];
 
   programs.nix-ld.enable = true;
