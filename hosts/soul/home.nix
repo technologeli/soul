@@ -2,12 +2,13 @@
 
 {
   imports = [
-    ../../modules/home-manager/neovim/neovim.nix
-    ../../modules/home-manager/tmux/tmux.nix
     ../../modules/home-manager/alacritty/alacritty.nix
-    ../../modules/home-manager/git/git.nix
     ../../modules/home-manager/fish/fish.nix
+    ../../modules/home-manager/git/git.nix
+    ../../modules/home-manager/neovim/neovim.nix
     ../../modules/home-manager/starship/starship.nix
+    ../../modules/home-manager/tmux/tmux.nix
+    ../../modules/home-manager/zoxide/zoxide.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -17,12 +18,13 @@
   nixpkgs.overlays = overlays;
   nixpkgs.config.allowUnfree = true;
   
-  neovim.enable = true;
-  tmux.enable = true;
   alacritty.enable = true;
-  git.enable = true;
   fish.enable = true;
+  git.enable = true;
+  neovim.enable = true;
   starship.enable = true;
+  tmux.enable = true;
+  zoxide.enable = true;
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
