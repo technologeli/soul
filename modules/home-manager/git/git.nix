@@ -1,7 +1,7 @@
 { pkgs, config, lib, ... }: {
 
   options = {
-    git.enable = lib.mkEnableOption "neovim";
+    git.enable = lib.mkEnableOption "git";
   };
 
   config = {

@@ -8,6 +8,8 @@
     programs.alacritty = {
       enable = true;
       settings = {
+        shell = "${pkgs.fish}/bin/fish";
+
         # window.decorations = "NONE";
         window.padding.x = 4;
         window.padding.y = 4;

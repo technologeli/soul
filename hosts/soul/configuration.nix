@@ -50,6 +50,9 @@
     pulse.enable = true;
   };
 
+  # always enable shell system wide
+  programs.fish.enable = true;
+
   users.users.eli = {
     isNormalUser = true;
     description = "eli";

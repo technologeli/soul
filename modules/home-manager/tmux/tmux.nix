@@ -10,6 +10,7 @@
       baseIndex = 1;
       escapeTime = 0;
       prefix = "C-g";
+      shell = "${pkgs.fish}/bin/fish";
       terminal = "screen-256color";
       extraConfig = ''
 
