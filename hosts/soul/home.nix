@@ -3,6 +3,7 @@
 {
   imports = [
     ../../modules/home-manager/alacritty/alacritty.nix
+    ../../modules/home-manager/firefox/firefox.nix
     ../../modules/home-manager/fish/fish.nix
     ../../modules/home-manager/git/git.nix
     ../../modules/home-manager/neovim/neovim.nix
@@ -19,6 +20,7 @@
   nixpkgs.config.allowUnfree = true;
   
   alacritty.enable = true;
+  firefox.enable = true;
   fish.enable = true;
   git.enable = true;
   neovim.enable = true;
@@ -42,7 +44,6 @@
     fzf
 
     logseq
-    floorp
     obsidian
     discord
     # # Adds the 'hello' command to your environment. It prints a friendly

@@ -57,9 +57,6 @@
     isNormalUser = true;
     description = "eli";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      firefox
-    ];
   };
 
   home-manager = {
