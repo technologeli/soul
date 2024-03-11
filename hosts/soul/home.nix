@@ -6,9 +6,11 @@
     ../../modules/home-manager/firefox/firefox.nix
     ../../modules/home-manager/fish/fish.nix
     ../../modules/home-manager/git/git.nix
+    ../../modules/home-manager/hyprland/hyprland.nix
     ../../modules/home-manager/neovim/neovim.nix
     ../../modules/home-manager/starship/starship.nix
     ../../modules/home-manager/tmux/tmux.nix
+    ../../modules/home-manager/waybar/waybar.nix
     ../../modules/home-manager/zoxide/zoxide.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -23,9 +25,11 @@
   firefox.enable = true;
   fish.enable = true;
   git.enable = true;
+  hyprland.enable = true;
   neovim.enable = true;
   starship.enable = true;
   tmux.enable = true;
+  waybar.enable = true;
   zoxide.enable = true;
 
   # This value determines the Home Manager release that your configuration is
@@ -55,7 +59,8 @@
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
+    noto-fonts-cjk-sans
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your

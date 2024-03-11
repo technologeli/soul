@@ -45,10 +45,6 @@
     opengl.enable = true;
     # nvidia.modesetting.enable = true;
   };
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
 
   services.xserver.xkb = {
     layout = "us";
@@ -96,18 +92,6 @@
     python311Packages.pip
     nodejs_21
     go
-
-    (waybar.overrideAttrs (oldAttrs: {
-      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-      })
-    )
-    mako
-    wl-clipboard
-    swww
-    rofi-wayland
-    networkmanagerapplet
-    grim
-    slurp
   ];
 
   programs.nix-ld.enable = true;

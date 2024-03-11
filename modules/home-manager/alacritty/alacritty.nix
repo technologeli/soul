@@ -16,6 +16,11 @@
 
         env.term = "xterm-256color";
 
+        font = {
+          normal.family = "Hack";
+          normal.style = "Regular";
+        };
+
         colors = {
           primary = {
             background = "#1E1E2E"; # base
