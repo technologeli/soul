@@ -32,6 +32,24 @@
   services.xserver.enable = true;
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  environment.sessionVariables = {
+    # hint electron apps to use wayland
+    NIXOS_OZONE_WL = "1";
+  };
+  hardware = {
+    opengl.enable = true;
+    # nvidia.modesetting.enable = true;
+  };
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
+
   services.xserver.xkb = {
     layout = "us";
     variant = "";
@@ -74,17 +92,33 @@
     gcc
     zip unzip p7zip
     gnupg
+    python3
+    python311Packages.pip
+    nodejs_21
+    go
+
+    (waybar.overrideAttrs (oldAttrs: {
+      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+      })
+    )
+    mako
+    wl-clipboard
+    swww
+    rofi-wayland
+    networkmanagerapplet
+    grim
+    slurp
   ];
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
   ];
-
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  services.pcscd.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryFlavor = "curses";
+    enableSSHSupport = true;
+  };
 
   # services.openssh.enable = true;
 
