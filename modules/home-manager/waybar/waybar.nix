@@ -92,6 +92,16 @@
                 window#waybar.hidden {
                     opacity: 0.2;
                 }
+
+                button {
+                    /* Use box-shadow instead of border so the text isn't offset */
+                    /* Avoid rounded borders under each button name */
+                    border: none;
+                    border-radius: 0;
+                }
+                button:hover {
+                    background: inherit;
+                }
                 
                 #workspaces button {
                     padding: 0 5px;
@@ -147,7 +157,7 @@
                 }
                 
                 #battery.charging, #battery.plugged {
-                    color: @text;
+                    color: @base;
                     background-color: @green;
                 }
                 
