@@ -89,10 +89,12 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  # nix search wget
   environment.systemPackages = with pkgs; [
-    clang-tools
-    clang
+    (hiPrio clang-tools.override {
+      llvmPackages = llvmPackages_16;
+      enableLibcxx = false;
+    })
+    llvmPackages_16.libstdcxxClang
     neovim-nightly
     git
     gcc
