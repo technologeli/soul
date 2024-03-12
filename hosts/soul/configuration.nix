@@ -93,6 +93,7 @@
   environment.systemPackages = with pkgs; [
     clang-tools
     clang
+    clangStdenv
     neovim-nightly
     git
     gcc
