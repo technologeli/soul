@@ -9,6 +9,7 @@ in
       upx
       ghidra-bin
       unixtools.xxd
+      burpsuite
 
       # stenography
       tenacity
