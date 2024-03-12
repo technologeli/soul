@@ -1,5 +1,6 @@
 let
-  pkgs = import <nixpkgs> {};
+  config = {allowUnfree = true;};
+  pkgs = import <nixpkgs> {inherit config;};
 in
   pkgs.mkShell {
     packages = with pkgs; [
