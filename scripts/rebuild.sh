@@ -3,7 +3,7 @@ set -e
 pushd ~/soulfiles
 $EDITOR
 alejandra . &>/dev/null
-git diff -U0 *.nix
+git diff -U0 .
 echo "NixOS Rebuilding..."
 rm ~/.mozilla/firefox/myprofile/containers.json
 sudo nixos-rebuild switch --upgrade --flake ~/soulfiles/#soul &>nixos-switch.log || (
