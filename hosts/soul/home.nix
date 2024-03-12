@@ -49,6 +49,7 @@
   home.packages = with pkgs; [
     eza
     fzf
+    ripgrep
     (pass.withExtensions (exts: [exts.pass-otp]))
     file
     alejandra
