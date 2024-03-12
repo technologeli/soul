@@ -1,13 +1,18 @@
 # man configuration.nix or nixos-help
-
-{ config, pkgs, inputs, overlays, ... }: {
+{
+  config,
+  pkgs,
+  inputs,
+  overlays,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
   ];
 
   nixpkgs.overlays = overlays;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -70,11 +75,14 @@
   users.users.eli = {
     isNormalUser = true;
     description = "eli";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
   };
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; inherit overlays; };
+    extraSpecialArgs = {
+      inherit inputs;
+      inherit overlays;
+    };
     users = {
       "eli" = import ./home.nix;
     };
@@ -86,7 +94,9 @@
     neovim-nightly
     git
     gcc
-    zip unzip p7zip
+    zip
+    unzip
+    p7zip
     gnupg
     python3
     python311Packages.pip
@@ -113,5 +123,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }

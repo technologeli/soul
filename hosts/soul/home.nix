@@ -1,6 +1,9 @@
-{ config, pkgs, overlays, ... }:
-
 {
+  config,
+  pkgs,
+  overlays,
+  ...
+}: {
   imports = [
     ../../modules/home-manager/alacritty/alacritty.nix
     ../../modules/home-manager/firefox/firefox.nix
@@ -20,7 +23,7 @@
 
   nixpkgs.overlays = overlays;
   nixpkgs.config.allowUnfree = true;
-  
+
   alacritty.enable = true;
   firefox.enable = true;
   fish.enable = true;
@@ -46,8 +49,9 @@
   home.packages = with pkgs; [
     eza
     fzf
-    (pass.withExtensions (exts: [ exts.pass-otp ]))
+    (pass.withExtensions (exts: [exts.pass-otp]))
     file
+    alejandra
 
     logseq
     obsidian
@@ -60,7 +64,7 @@
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
-    (pkgs.nerdfonts.override { fonts = [ "Hack" ]; })
+    (pkgs.nerdfonts.override {fonts = ["Hack"];})
     noto-fonts-cjk-sans
 
     # # You can also create simple shell scripts directly inside your

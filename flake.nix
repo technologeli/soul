@@ -15,23 +15,26 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-      overlays = [ inputs.neovim-nightly-overlay.overlay ];
-    in
-    {
-    
-      nixosConfigurations = {
-        soul = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs; inherit overlays;};
-          modules = [ 
-            ./hosts/soul/configuration.nix
-            inputs.home-manager.nixosModules.default
-          ];
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+    overlays = [inputs.neovim-nightly-overlay.overlay];
+  in {
+    nixosConfigurations = {
+      soul = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+          inherit overlays;
         };
+        modules = [
+          ./hosts/soul/configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
       };
-
     };
+  };
 }

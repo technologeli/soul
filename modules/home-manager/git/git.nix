@@ -1,5 +1,9 @@
-{ pkgs, config, lib, ... }: {
-
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   options = {
     git.enable = lib.mkEnableOption "git";
   };
@@ -10,7 +14,7 @@
       userName = "Elijah Lieu";
       userEmail = "elijahlieu@protonmail.com";
       extraConfig = {
-          init.defaultBranch = "main";
+        init.defaultBranch = "main";
       };
     };
   };

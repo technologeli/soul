@@ -1,16 +1,19 @@
-{ inputs, pkgs, config, lib, ... }: 
-  let
-    lock-false = {
-      Value = false;
-      Status = "locked";
-    };
-    lock-true = {
-      Value = true;
-      Status = "locked";
-    };
-  in
 {
-
+  inputs,
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
+  lock-false = {
+    Value = false;
+    Status = "locked";
+  };
+  lock-true = {
+    Value = true;
+    Status = "locked";
+  };
+in {
   options = {
     firefox.enable = lib.mkEnableOption "firefox";
   };
@@ -22,7 +25,7 @@
         DisableTelemetry = true;
         DisableFirefoxStudies = true;
         EnableTrackingProtection = {
-          Value= true;
+          Value = true;
           Locked = true;
           Cryptomining = true;
           Fingerprinting = true;
@@ -59,29 +62,32 @@
         };
 
         search = {
-            default = "DuckDuckGo";
-            privateDefault = "DuckDuckGo";
-            force = true;
+          default = "DuckDuckGo";
+          privateDefault = "DuckDuckGo";
+          force = true;
         };
 
         extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
-            ublock-origin
-            privacy-badger
-            multi-account-containers
-            duckduckgo-privacy-essentials
-            tree-style-tab
+          ublock-origin
+          privacy-badger
+          multi-account-containers
+          duckduckgo-privacy-essentials
+          tree-style-tab
         ];
 
         userChrome = ''
-        /* hides the native tabs */
-        #TabsToolbar {
-        visibility: collapse;
-        }
+          /* hides the native tabs */
+          #TabsToolbar {
+          visibility: collapse;
+          }
         '';
 
         # Check about:config for options.
-        settings = { 
-          "browser.contentblocking.category" = { Value = "strict"; Status = "locked"; };
+        settings = {
+          "browser.contentblocking.category" = {
+            Value = "strict";
+            Status = "locked";
+          };
           "extensions.pocket.enabled" = lock-false;
           "extensions.screenshots.disabled" = lock-true;
           "browser.topsites.contile.cachedTiles" = "[]";

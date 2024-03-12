@@ -1,5 +1,9 @@
-{ pkgs, config, lib, ... }: {
-
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   options = {
     starship.enable = lib.mkEnableOption "starship";
   };
@@ -46,7 +50,6 @@
         };
 
         time.disabled = true;
-
       };
     };
   };
