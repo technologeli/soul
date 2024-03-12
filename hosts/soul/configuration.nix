@@ -102,7 +102,6 @@
     python311Packages.pip
     nodejs_21
     go
-    clang-tools
   ];
 
   programs.nix-ld.enable = true;
