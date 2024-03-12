@@ -91,6 +91,8 @@
   nixpkgs.config.allowUnfree = true;
   # nix search wget
   environment.systemPackages = with pkgs; [
+    clang-tools
+    clang
     neovim-nightly
     git
     gcc
