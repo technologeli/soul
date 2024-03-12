@@ -19,6 +19,7 @@
         ls = "eza -a --color=always";
         grep = "grep --color=always";
         ".." = "cd ..";
+        rebuild = "~/soulfiles/scripts/rebuild.sh";
       };
     };
   };
