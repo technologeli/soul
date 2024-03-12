@@ -4,6 +4,7 @@ in
   pkgs.mkShell {
     packages = with pkgs; [
       gef
+      openssl
       (python3.withPackages (python-pkgs: [
         python-pkgs.pycryptodome
         python-pkgs.pwntools
