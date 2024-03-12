@@ -47,6 +47,7 @@
     eza
     fzf
     (pass.withExtensions (exts: [ exts.pass-otp ]))
+    file
 
     logseq
     obsidian

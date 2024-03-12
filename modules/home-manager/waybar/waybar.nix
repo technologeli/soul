@@ -10,7 +10,7 @@
                 {
                     layer = "top";
                     position = "top";
-                    margin = "10px 5px 0px";
+                    margin = "10px 10px 0px";
                     modules-left = [ "hyprland/workspaces" ];
                     modules-right = [ "idle_inhibitor" "pulseaudio" "battery" "clock"  "tray" ];
                     "hyprland/workspaces" = {
