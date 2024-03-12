@@ -20,8 +20,6 @@ in
       exiftool
 
       (python3.withPackages (python-pkgs: [
-        python-pkgs.z3
-        python-pkgs.angr
         python-pkgs.pycryptodome
         python-pkgs.pwntools
         python-pkgs.ropgadget
