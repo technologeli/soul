@@ -93,7 +93,6 @@
   environment.systemPackages = with pkgs; [
     clang-tools
     clang
-    clangStdenv
     neovim-nightly
     git
     gcc
@@ -109,6 +108,7 @@
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
   ];
   services.pcscd.enable = true;
   programs.gnupg.agent = {
