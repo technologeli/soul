@@ -20,6 +20,7 @@
         grep = "grep --color=always";
         ".." = "cd ..";
         rebuild = "~/soulfiles/scripts/rebuild.sh";
+        ctf = "nix-shell --run fish ~/soulfiles/scripts/ctf.nix";
       };
     };
   };
