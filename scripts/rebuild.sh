@@ -3,9 +3,12 @@ set -e
 pushd ~/soulfiles
 $EDITOR
 alejandra . &>/dev/null
-git diff -U0 .
+git diff .
 echo "NixOS Rebuilding..."
-rm ~/.mozilla/firefox/myprofile/containers.json
+file_path="~/.mozilla/firefox/myprofile/containers.json"
+if [ -f "$file_path" ]; then
+    rm "$file_path"
+fi
 sudo nixos-rebuild switch --upgrade --flake ~/soulfiles/#soul &>nixos-switch.log || (
  cat nixos-switch.log | grep --color error && false)
 gen=$(nixos-rebuild list-generations | grep current)
