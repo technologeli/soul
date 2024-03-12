@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 pushd ~/soulfiles
-nvim
+$EDITOR
 alejandra . &>/dev/null
 git diff -U0 *.nix
 echo "NixOS Rebuilding..."
@@ -11,3 +11,4 @@ sudo nixos-rebuild switch --upgrade --flake ~/soulfiles/#soul &>nixos-switch.log
 gen=$(nixos-rebuild list-generations | grep current)
 git commit -am "$gen"
 popd
+notify-send -e "NixOS rebuild completed successfully."

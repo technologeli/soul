@@ -308,6 +308,7 @@
       brightnessctl
       hypridle
       hyprlock
+      libnotify
     ];
   };
 }
