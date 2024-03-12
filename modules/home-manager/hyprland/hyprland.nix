@@ -253,7 +253,7 @@
             "$mainMod CONTROL, k, swapwindow, u"
             "$mainMod, S, togglespecialworkspace, magic"
             "$mainMod SHIFT, S, movetoworkspace, special:magic"
-            ",Print,exec,grim -l 0 -g '$(slurp -d)' - | wl-copy"
+            '',Print,exec,grim -l 0 -g "$(slurp -d)" - | wl-copy''
           ]
           ++ (
             builtins.concatLists (builtins.genList (
