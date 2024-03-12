@@ -102,9 +102,6 @@
     python311Packages.pip
     nodejs_21
     go
-    clang-tools
-    llvmPackages_latest.clang
-    llvmPackages_latest.libcxx
   ];
 
   programs.nix-ld.enable = true;
