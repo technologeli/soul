@@ -16,7 +16,7 @@ in
       binwalk
       steghide
       zsteg
-      outguess
+      # outguess
       exiftool
 
       (python3.withPackages (python-pkgs: [
