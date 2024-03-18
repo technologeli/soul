@@ -25,14 +25,6 @@
           normal.style = "Regular";
         };
 
-        keyboard.bindings = [
-          {
-            key = "Back";
-            mods = "Control";
-            chars = "\\x17";
-          }
-        ];
-
         colors = {
           primary = {
             background = "#1E1E2E"; # base
