@@ -5,7 +5,7 @@ $EDITOR
 alejandra . &>/dev/null
 git diff .
 echo "NixOS Rebuilding..."
-file_path="~/.mozilla/firefox/myprofile/containers.json"
+file_path="/home/eli/.mozilla/firefox/myprofile/containers.json"
 if [ -f "$file_path" ]; then
     rm "$file_path"
 fi
