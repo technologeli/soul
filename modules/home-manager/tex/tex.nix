@@ -3,12 +3,18 @@
   config,
   lib,
   ...
-}: {
+}: let
+  tex = pkgs.texlive.combine {
+    inherit (pkgs.texlive) scheme-full;
+  };
+in {
   options = {
     tex.enable = lib.mkEnableOption "tex";
   };
 
   config = {
-    programs.texlive.enable = true;
+    home.packages = with pkgs; [
+      tex
+    ];
   };
 }
