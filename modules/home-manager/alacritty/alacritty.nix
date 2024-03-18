@@ -29,7 +29,7 @@
           {
             key = "Back";
             mods = "Control";
-            chars = "\x17";
+            chars = "\\x17";
           }
         ];
 
