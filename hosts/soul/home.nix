@@ -12,6 +12,7 @@
     ../../modules/home-manager/hyprland/hyprland.nix
     ../../modules/home-manager/neovim/neovim.nix
     ../../modules/home-manager/starship/starship.nix
+    ../../modules/home-manager/tex/tex.nix
     ../../modules/home-manager/tmux/tmux.nix
     ../../modules/home-manager/waybar/waybar.nix
     ../../modules/home-manager/zoxide/zoxide.nix
@@ -31,6 +32,7 @@
   hyprland.enable = true;
   neovim.enable = true;
   starship.enable = true;
+  tex.enable = true;
   tmux.enable = true;
   waybar.enable = true;
   zoxide.enable = true;
