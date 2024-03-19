@@ -42,6 +42,7 @@ in {
         SearchBar = "unified"; # alternative: "separate"
       };
 
+      # See rebuild script for more details
       profiles.myprofile = {
         containers = {
           personal = {
