@@ -92,6 +92,7 @@
   environment.systemPackages = with pkgs; [
     clang-tools
     clang
+    gnumake
     wget
     neovim-nightly
     git
