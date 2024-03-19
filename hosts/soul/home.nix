@@ -52,6 +52,7 @@
     eza
     fzf
     ripgrep
+    imagemagick
     (pass.withExtensions (exts: [exts.pass-otp]))
     file
     alejandra
