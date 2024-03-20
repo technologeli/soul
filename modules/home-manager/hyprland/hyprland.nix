@@ -174,7 +174,7 @@
         input = {
           kb_layout = "us";
           kb_options = "altwin:swap_lalt_lwin,ctrl:nocaps";
-          follow_mouse = "0";
+          follow_mouse = "2";
           touchpad = {
             natural_scroll = "yes";
           };
