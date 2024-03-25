@@ -105,6 +105,7 @@
     python311Packages.pip
     nodejs_21
     go
+    rustup
   ];
 
   programs.nix-ld.enable = true;
