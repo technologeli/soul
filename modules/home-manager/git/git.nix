@@ -15,6 +15,7 @@
       userEmail = "elijahlieu@protonmail.com";
       extraConfig = {
         init.defaultBranch = "main";
+        push.autoSetupRemote = true;
       };
     };
   };
