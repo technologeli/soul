@@ -93,7 +93,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.api.nvim_create_autocmd("BufWritePre", {
   desc = "Prevent persistent undo files in /tmp",
   group = vim.api.nvim_create_augroup("no-tmp-persistent-undo", { clear = true }),
-  pattern = "/dev/*",
+  pattern = {"/dev/*", "/tmp/*"},
   callback = function()
     vim.opt_local.undofile = false
   end,
