@@ -56,6 +56,8 @@
     (pass.withExtensions (exts: [exts.pass-otp]))
     file
     alejandra
+    remind
+    wyrd
 
     logseq
     obsidian
