@@ -240,6 +240,7 @@
             "$mainMod, Escape, exit, "
             "$mainMod, E, exec, $fileManager"
             "$mainMod, V, togglefloating, "
+            "$mainMod, C, $terminal -e wyrd"
             "$mainMod, P, exec, $menu"
 
             "$mainMod, h, movefocus, l"
