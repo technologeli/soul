@@ -239,6 +239,7 @@
             "$mainMod, Q, killactive, "
             "$mainMod, Escape, exit, "
             "$mainMod, E, exec, $fileManager"
+            "$mainMod, C, exec, $terminal -e calcurse"
             "$mainMod, V, togglefloating, "
             "$mainMod, P, exec, $menu"
 
