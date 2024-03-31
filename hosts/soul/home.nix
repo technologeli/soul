@@ -56,7 +56,6 @@
     (pass.withExtensions (exts: [exts.pass-otp]))
     file
     alejandra
-    calcurse
 
     logseq
     obsidian
