@@ -729,7 +729,6 @@ require("lazy").setup({
       { "<leader>u", vim.cmd.UndotreeToggle, desc = "[U]ndoTree" },
     },
   },
-  "github/copilot.vim",
   {
     "theprimeagen/harpoon",
     keys = {
