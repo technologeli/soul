@@ -21,6 +21,7 @@
         ".." = "cd ..";
         rebuild = "~/soulfiles/scripts/rebuild.sh";
         ctf = "nix-shell --run fish ~/soulfiles/scripts/ctf.nix";
+        cali = "remind ~/cali/cal.rem";
       };
     };
   };
