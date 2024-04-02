@@ -75,8 +75,9 @@
   users.users.eli = {
     isNormalUser = true;
     description = "eli";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "adbusers"];
   };
+  programs.adb.enable = true;
 
   home-manager = {
     extraSpecialArgs = {
