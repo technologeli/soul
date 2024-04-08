@@ -237,7 +237,8 @@
           [
             "$mainMod, Return, exec, $terminal"
             "$mainMod, Q, killactive, "
-            "$mainMod, Escape, exit, "
+            "$mainMod SHIFT, Escape, exit, "
+            "$mainMod, Escape, exec, hyprlock & systemctl suspend"
             "$mainMod, E, exec, $fileManager"
             "$mainMod, V, togglefloating, "
             "$mainMod, C, exec, $terminal -e wyrd"
