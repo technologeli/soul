@@ -177,7 +177,7 @@
           follow_mouse = "2";
           touchpad = {
             natural_scroll = "yes";
-            tap_to_click = "false";
+            "tap-to-click" = "false";
           };
           sensitivity = "0";
         };
