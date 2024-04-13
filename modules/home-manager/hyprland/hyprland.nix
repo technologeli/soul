@@ -244,6 +244,8 @@
             "$mainMod, V, togglefloating, "
             "$mainMod, C, exec, $terminal -e wyrd"
             "$mainMod, P, exec, $menu"
+            "$mainMod, O, movewindow, mon:0"
+            "$mainMod CONTROL, O, movewindow, mon:1"
 
             "$mainMod, h, movefocus, l"
             "$mainMod, l, movefocus, r"
