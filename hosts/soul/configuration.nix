@@ -75,7 +75,7 @@
   users.users.eli = {
     isNormalUser = true;
     description = "eli";
-    extraGroups = ["networkmanager" "wheel" "adbusers"];
+    extraGroups = ["networkmanager" "wheel" "adbusers" "docker"];
   };
   programs.adb.enable = true;
 
@@ -108,6 +108,8 @@
     go
     rustup
   ];
+
+  virtualisation.docker.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
