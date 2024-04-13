@@ -107,6 +107,7 @@
     nodejs_21
     go
     rustup
+    docker-compose
   ];
 
   virtualisation.docker.enable = true;
