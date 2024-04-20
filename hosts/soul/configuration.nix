@@ -75,7 +75,7 @@
   users.users.eli = {
     isNormalUser = true;
     description = "eli";
-    extraGroups = ["networkmanager" "wheel" "adbusers" "docker"];
+    extraGroups = ["networkmanager" "wheel" "adbusers" "docker" "vboxusers"];
   };
   programs.adb.enable = true;
 
@@ -111,6 +111,7 @@
   ];
 
   virtualisation.docker.enable = true;
+  virtualisation.virtualbox.host.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
