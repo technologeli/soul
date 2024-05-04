@@ -24,6 +24,8 @@ in
         python-pkgs.pycryptodome
         python-pkgs.pwntools
         python-pkgs.ropgadget
+        python-pkgs.capstone
+        python-pkgs.scapy
       ]))
     ];
   }

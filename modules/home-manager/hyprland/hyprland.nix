@@ -97,7 +97,6 @@
           "nm-applet --indicator"
           "waybar"
           "mako"
-          "hyprlock"
           "hypridle"
         ];
         "$rosewaterAlpha" = "f5e0dc";
@@ -173,7 +172,7 @@
 
         input = {
           kb_layout = "us";
-          kb_options = "altwin:swap_lalt_lwin,ctrl:nocaps";
+          kb_options = "ctrl:nocaps";
           follow_mouse = "2";
           touchpad = {
             natural_scroll = "yes";
