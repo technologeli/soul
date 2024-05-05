@@ -105,7 +105,6 @@
     python3
     python311Packages.pip
     nodejs_21
-    go
     rustup
     docker-compose
   ];
