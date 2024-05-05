@@ -101,6 +101,15 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+  desc = "Make .templ files have a filetype of templ",
+  group = vim.api.nvim_create_augroup("Templ", { clear = true }),
+  pattern = "*.templ",
+  callback = function()
+    vim.opt_local.filetype = "templ"
+  end,
+})
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
