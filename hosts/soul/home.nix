@@ -114,6 +114,7 @@
   #  /etc/profiles/per-user/eli/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
+    GOPATH = "~/go/bin";
     # EDITOR = "emacs";
   };
 

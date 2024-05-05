@@ -4,7 +4,6 @@ let
 in
   pkgs.mkShell {
     packages = with pkgs; [
-      go
-      air
+      go_1_22
     ];
   }
