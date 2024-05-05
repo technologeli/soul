@@ -106,6 +106,7 @@
     python311Packages.pip
     nodejs_21
     rustup
+    go_1_22
     docker-compose
   ];
 

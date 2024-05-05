@@ -114,9 +114,12 @@
   #  /etc/profiles/per-user/eli/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    GOPATH = "~/go/bin";
     # EDITOR = "emacs";
   };
+
+  home.sessionPath = [
+    "$HOME/go/bin"
+  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
