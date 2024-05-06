@@ -58,6 +58,7 @@
     (pass.withExtensions (exts: [exts.pass-otp]))
     file
     alejandra
+    playerctl
 
     logseq
     obsidian
