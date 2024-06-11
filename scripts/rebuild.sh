@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: rebuild <soul or spire>"
+    exit 1
+fi
+
 set -e
 pushd ~/soulfiles
 $EDITOR
@@ -11,7 +17,7 @@ if [ -f "$file_path" ]; then
     mv "$file_path" "$tmp_path"
 fi
 git add .
-sudo nixos-rebuild switch --upgrade --flake ~/soulfiles/#soul &>nixos-switch.log || (
+sudo nixos-rebuild switch --upgrade --flake ~/soulfiles/#$1 &>nixos-switch.log || (
  cat nixos-switch.log | grep --color error && false)
 if [ -f "$tmp_path" ]; then
     mv "$tmp_path" "$file_path"
