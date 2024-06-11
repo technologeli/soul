@@ -35,6 +35,16 @@
           inputs.home-manager.nixosModules.default
         ];
       };
+      spire = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+          inherit overlays;
+        };
+        modules = [
+          ./hosts/spire/configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
   };
 }
