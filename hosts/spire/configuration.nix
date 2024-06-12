@@ -104,7 +104,9 @@
     gnupg
     python3
     python311Packages.pip
-    nodejs_21
+    nodejs_21 # search.nixpkgs.org lies
+    corepack_21
+    bun
     rustup
     go_1_22
     docker-compose
