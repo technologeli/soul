@@ -12,7 +12,7 @@
     programs.git = {
       enable = true;
       userName = "Elijah Lieu";
-      userEmail = "elijahlieu@protonmail.com";
+      userEmail = "50640682+technologeli@users.noreply.github.com";
       extraConfig = {
         init.defaultBranch = "main";
         push.autoSetupRemote = true;
