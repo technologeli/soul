@@ -30,7 +30,7 @@
   firefox.enable = true;
   fish.enable = true;
   git.enable = true;
-  hyprland.enable = true;
+  # hyprland.enable = true;
   neovim.enable = true;
   remind.enable = true;
   starship.enable = true;
