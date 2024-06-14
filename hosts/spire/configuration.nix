@@ -106,6 +106,7 @@
     python311Packages.pip
     nodejs_21 # search.nixpkgs.org lies
     corepack_21
+    tailwindcss
     bun
     rustup
     go_1_22
