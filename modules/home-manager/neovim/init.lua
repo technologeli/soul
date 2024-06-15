@@ -97,13 +97,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.api.nvim_create_autocmd("BufWritePre", {
   desc = "Prevent persistent undo files in /tmp",
   group = vim.api.nvim_create_augroup("no-tmp-persistent-undo", { clear = true }),
-  pattern = { "/dev/*", "/tmp/*" },
+  pattern = {"/dev/*", "/tmp/*"},
   callback = function()
     vim.opt_local.undofile = false
   end,
 })
 
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
   desc = "Make .templ files have a filetype of templ",
   group = vim.api.nvim_create_augroup("Templ", { clear = true }),
   pattern = "*.templ",
@@ -134,7 +134,7 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require("lazy").setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  "tpope/vim-sleuth",   -- Detect tabstop and shiftwidth automatically
+  "tpope/vim-sleuth",  -- Detect tabstop and shiftwidth automatically
   "tpope/vim-fugitive", -- Detect tabstop and shiftwidth automatically
   -- "If fugitive.vim is the Git, rhubarb.vim is the Hub." - tpope
   -- 'tpope/vim-rhubarb'
@@ -184,7 +184,7 @@ require("lazy").setup({
   -- after the plugin has been loaded:
   --  config = function() ... end
 
-  {                     -- Useful plugin to show you pending keybinds.
+  {                   -- Useful plugin to show you pending keybinds.
     "folke/which-key.nvim",
     event = "VimEnter", -- Sets the loading event to 'VimEnter'
     config = function() -- This is the function that runs, AFTER loading
@@ -549,7 +549,7 @@ require("lazy").setup({
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        templ = { "prettier" },
+        -- javascript = { { "prettierd", "prettier" } },
       },
     },
   },
