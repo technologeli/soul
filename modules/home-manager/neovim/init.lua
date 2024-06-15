@@ -785,7 +785,12 @@ require("lazy").setup({
   {
     "stevearc/oil.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {}
+    opts = {
+      view_options = {
+        show_hidden = true
+      }
+
+    }
   }
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
