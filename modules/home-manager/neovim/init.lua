@@ -539,6 +539,9 @@ require("lazy").setup({
         end
         require("conform").format({ async = true, lsp_fallback = true, range = range })
       end, { range = true })
+
+      vim.keymap.set("n", "<leader>f", "<cmd>Format<cr>", { desc = "[F]ormat" })
+
     end,
     opts = {
       notify_on_error = false,
