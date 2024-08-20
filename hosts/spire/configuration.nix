@@ -35,8 +35,8 @@
   };
 
   services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
   # programs.hyprland = {
   #   enable = true;
   #   xwayland.enable = true;
@@ -47,7 +47,7 @@
     NIXOS_OZONE_WL = "1";
   };
   hardware = {
-    opengl.enable = true;
+    graphics.enable = true;
     # nvidia.modesetting.enable = true;
   };
 
@@ -59,7 +59,6 @@
   services.printing.enable = true;
   hardware.bluetooth.enable = true;
 
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -95,7 +94,6 @@
     clang
     gnumake
     wget
-    neovim-nightly
     git
     gcc
     zip
@@ -104,8 +102,8 @@
     gnupg
     python3
     python311Packages.pip
-    nodejs_21 # search.nixpkgs.org lies
-    corepack_21
+    nodejs_22
+    corepack_22
     tailwindcss
     bun
     rustup
@@ -125,7 +123,7 @@
   services.pcscd.enable = true;
   programs.gnupg.agent = {
     enable = true;
-    pinentryFlavor = "qt";
+    pinentryPackage = pkgs.pinentry-qt;
     enableSSHSupport = true;
   };
 

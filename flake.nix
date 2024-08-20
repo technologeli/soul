@@ -22,7 +22,7 @@
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-    overlays = [inputs.neovim-nightly-overlay.overlay];
+    overlays = [inputs.neovim-nightly-overlay.overlays.default];
   in {
     nixosConfigurations = {
       soul = nixpkgs.lib.nixosSystem {
