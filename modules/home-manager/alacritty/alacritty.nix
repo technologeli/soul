@@ -21,7 +21,7 @@
         env.term = "xterm-256color";
 
         font = {
-          normal.family = "Hack";
+          normal.family = "Hack Nerd Font";
           normal.style = "Regular";
         };
 

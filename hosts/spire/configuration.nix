@@ -37,15 +37,37 @@
     type = "fcitx5";
     enable = true;
     fcitx5.addons = with pkgs; [
-      kdePackages.fcitx5-qt # alternatively, kdePackages.fcitx5-qt
+      fcitx5-gtk
       fcitx5-hangul
       fcitx5-nord # a color theme
     ];
   };
 
   services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
+
+  environment.gnome.excludePackages =
+    (with pkgs; [
+      gnome-photos
+      gnome-tour
+      gedit # text editor
+    ])
+    ++ (with pkgs.gnome; [
+      cheese # webcam tool
+      gnome-music
+      gnome-terminal
+      epiphany # web browser
+      geary # email reader
+      evince # document viewer
+      gnome-characters
+      totem # video player
+      tali # poker game
+      iagno # go game
+      hitori # sudoku game
+      atomix # puzzle game
+    ]);
+
   # programs.hyprland = {
   #   enable = true;
   #   xwayland.enable = true;
@@ -99,6 +121,7 @@
 
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
+    gnome.gnome-tweaks
     clang-tools
     clang
     gnumake
@@ -132,7 +155,7 @@
   services.pcscd.enable = true;
   programs.gnupg.agent = {
     enable = true;
-    pinentryPackage = pkgs.pinentry-qt;
+    pinentryPackage = pkgs.pinentry-gtk2;
     enableSSHSupport = true;
   };
 
