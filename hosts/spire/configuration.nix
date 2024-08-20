@@ -33,6 +33,15 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
+  i18n.inputMethod = {
+    type = "fcitx5";
+    enable = true;
+    fcitx5.addons = with pkgs; [
+      kdePackages.fcitx5-qt # alternatively, kdePackages.fcitx5-qt
+      fcitx5-hangul
+      fcitx5-nord # a color theme
+    ];
+  };
 
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
