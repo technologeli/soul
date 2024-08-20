@@ -60,7 +60,6 @@
     alejandra
     playerctl
 
-    anki-bin
     logseq
     obsidian
     discord

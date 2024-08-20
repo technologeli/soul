@@ -111,6 +111,8 @@
     rustup
     go_1_22
     docker-compose
+
+    anki-bin
   ];
 
   virtualisation.docker.enable = true;
