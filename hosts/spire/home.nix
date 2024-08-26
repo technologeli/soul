@@ -63,6 +63,7 @@
     alejandra
     playerctl
 
+    obs-studio
     logseq
     obsidian
     discord
