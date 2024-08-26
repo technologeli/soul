@@ -59,7 +59,6 @@
   services.printing.enable = true;
   hardware.bluetooth.enable = true;
 
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -95,7 +94,6 @@
     clang
     gnumake
     wget
-    neovim-nightly
     git
     gcc
     zip
@@ -104,7 +102,8 @@
     gnupg
     python3
     python311Packages.pip
-    nodejs_21
+    nodejs_22
+    corepack_22
     rustup
     go_1_22
     docker-compose
@@ -120,7 +119,7 @@
   services.pcscd.enable = true;
   programs.gnupg.agent = {
     enable = true;
-    pinentryFlavor = "curses";
+    pinentryPackage = pkgs.pinentry-qt;
     enableSSHSupport = true;
   };
 

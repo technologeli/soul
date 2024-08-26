@@ -25,6 +25,9 @@
 
   nixpkgs.overlays = overlays;
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-27.3.11"
+  ];
 
   alacritty.enable = true;
   firefox.enable = true;
@@ -60,6 +63,7 @@
     alejandra
     playerctl
 
+    obs-studio
     logseq
     obsidian
     discord
