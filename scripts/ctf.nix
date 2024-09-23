@@ -20,12 +20,15 @@ in
       # outguess
       exiftool
 
+      pip-audit
+
       (python3.withPackages (python-pkgs: [
         python-pkgs.pycryptodome
         python-pkgs.pwntools
         python-pkgs.ropgadget
         python-pkgs.capstone
         python-pkgs.scapy
+        python-pkgs.sympy
       ]))
     ];
   }
