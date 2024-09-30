@@ -13,6 +13,7 @@
     ../../modules/home-manager/neovim/neovim.nix
     ../../modules/home-manager/remind/remind.nix
     ../../modules/home-manager/starship/starship.nix
+    ../../modules/home-manager/sway/sway.nix
     ../../modules/home-manager/tex/tex.nix
     ../../modules/home-manager/tmux/tmux.nix
     ../../modules/home-manager/waybar/waybar.nix
@@ -37,6 +38,7 @@
   neovim.enable = true;
   remind.enable = true;
   starship.enable = true;
+  sway.enable = true;
   tex.enable = true;
   tmux.enable = true;
   waybar.enable = true;

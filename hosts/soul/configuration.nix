@@ -107,6 +107,11 @@
     rustup
     go_1_22
     docker-compose
+
+    grim
+    slurp
+    wl-clipboard
+    mako
   ];
 
   virtualisation.docker.enable = true;
