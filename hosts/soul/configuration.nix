@@ -107,6 +107,7 @@
     rustup
     go_1_22
     docker-compose
+    zig
 
     grim
     slurp
