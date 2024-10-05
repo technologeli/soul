@@ -37,10 +37,14 @@
   services.xserver.enable = true;
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
-  programs.hyprland = {
+  programs.sway = {
     enable = true;
-    xwayland.enable = true;
+    wrapperFeatures.gtk = true;
   };
+  # programs.hyprland = {
+  #enable = true;
+  # xwayland.enable = true;
+  #};
 
   environment.sessionVariables = {
     # hint electron apps to use wayland
