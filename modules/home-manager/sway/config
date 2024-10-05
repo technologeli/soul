@@ -147,6 +147,7 @@ for_window [title=".*"] border pixel 2
 
 assign [app_id="firefox"] $ws9
 assign [app_id="Alacritty"] $ws0
+assign [app_id="discord"] $ws2
 focus_follows_mouse no
 
 include /etc/sway/config.d/*

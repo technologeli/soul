@@ -17,6 +17,8 @@ in
       binwalk
       steghide
       zsteg
+      tcpflow
+      wireshark
       # outguess
       exiftool
 
