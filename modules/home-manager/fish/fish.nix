@@ -24,6 +24,8 @@
         cali = "remind -g ~/cali/cal.rem";
         caliw = "remind -g -c+ ~/cali/cal.rem";
         calim = "remind -g -c ~/cali/cal.rem";
+        patch32 = "patchelf --set-interpreter /home/eli/p/dpkg/libc6-i386/lib/i386-linux-gnu/ld-linux.so.2";
+        run32 = "LD_LIBRARY_PATH=/home/eli/p/dpkg/libc6-i386/lib/i386-linux-gnu/";
       };
     };
   };

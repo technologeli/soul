@@ -31,6 +31,7 @@ in
         python-pkgs.capstone
         python-pkgs.scapy
         python-pkgs.sympy
+        python-pkgs.z3-solver
       ]))
     ];
   }
