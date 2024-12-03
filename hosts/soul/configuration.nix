@@ -52,9 +52,6 @@
   };
   hardware = {
     opengl.enable = true;
-    opengl.extraPackages = with pkgs; [
-      intel-compute-runtime
-    ];
     # nvidia.modesetting.enable = true;
   };
 
